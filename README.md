@@ -1,3 +1,4 @@
+home: true
 # hkytheater-light
 ### hky.moe ( light version)
 
