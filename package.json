@@ -1,0 +1,22 @@
+{
+  "name": "v.hky.moe",
+  "version": "1.0.0",
+  "description": "vuepress-based-blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hkysxm/hkytheater-light.git"
+  },
+  "author": "hkysxm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hkysxm/hkytheater-light/issues"
+  },
+  "homepage": "https://github.com/hkysxm/hkytheater-light#readme",
+  "devDependencies": {
+    "vuepress": "^1.9.7"
+  }
+}
