@@ -6,4 +6,5 @@ home: true
 
  - The light version of hky.moe
  - fast, light
+ - Transfer article by Auto Script
  - Articles will be 7 ~ 30 days later than hky.moe
