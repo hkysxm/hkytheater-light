@@ -41,7 +41,7 @@
 
 ## 刷入欧版系统和magisk
 
- 1. 进入 TWRP，**Wipe** 一次清手机数据以防出现其他问题，只 root 的不用清数据后面也不用刷 magisk.zip
+ 1. 进入 TWRP，**Wipe** 一次清手机数据以防出现其他问题，不 root 的不用清数据后面也不用刷 magisk.zip
  
  2. 把下载好的欧版 ROM 包和 magisk 复制到手机
 
