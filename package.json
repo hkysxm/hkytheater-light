@@ -4,8 +4,8 @@
   "description": "vuepress-based-blog",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:dev": "node scripts/vuepress.js dev docs",
+    "docs:build": "node scripts/vuepress.js build docs"
   },
   "repository": {
     "type": "git",
