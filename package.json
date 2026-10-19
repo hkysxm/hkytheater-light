@@ -1,11 +1,14 @@
 {
   "name": "v.hky.moe",
   "version": "1.0.0",
-  "description": "vuepress-based-blog",
-  "main": "index.js",
+  "description": "vitepress-based-blog",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs",
+    "docs:dev": "npm run dev",
+    "docs:build": "npm run build",
+    "test": "node --test tests/*.test.mjs"
   },
   "repository": {
     "type": "git",
@@ -18,6 +21,10 @@
   },
   "homepage": "https://github.com/hkysxm/hkytheater-light#readme",
   "devDependencies": {
-    "vuepress": "^1.9.7"
+    "parse5": "^8.0.1",
+    "vitepress": "^1.6.4"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }
