@@ -1,15 +1,14 @@
 import { createContentLoader } from 'vitepress'
+import { articleTitle, isArticle } from './theme/utils/title.mts'
 
 export default createContentLoader('*.md', {
   includeSrc: true,
   transform(pages) {
     return pages
-      .filter(page => !['/', '/README.html', '/index.html'].includes(page.url)
-        && page.src?.trim() && page.src.trim() !== 'null')
+      .filter(page => isArticle(page.url, page.src || '', page.frontmatter))
       .map(page => ({
         url: page.url,
-        title: page.frontmatter.title || decodeURIComponent(page.url.split('/').pop()!)
-          .replace(/\.html$/, '').replace(/&amp;/g, '&').replace(/&quot;/g, '"')
+        title: articleTitle(page.url, page.frontmatter)
       }))
       .sort((a, b) => a.title.localeCompare(b.title, 'zh-CN'))
   }

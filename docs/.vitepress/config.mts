@@ -1,6 +1,9 @@
 import { fileURLToPath } from 'node:url'
+import { readFileSync } from 'node:fs'
+import { resolve } from 'node:path'
 import { defineConfig } from 'vitepress'
 import archiveMarkdown from './archive-markdown.mjs'
+import { articlePageData } from './article-page.mts'
 
 export default defineConfig({
   title: 'hkytheater-light',
@@ -9,6 +12,9 @@ export default defineConfig({
   outDir: fileURLToPath(new URL('../../dist', import.meta.url)),
   themeConfig: {
     nav: [{ text: '文章', link: '/#文章列表' }]
+  },
+  transformPageData(pageData, { siteConfig }) {
+    return articlePageData(pageData, readFileSync(resolve(siteConfig.srcDir, pageData.relativePath), 'utf8'))
   },
   markdown: {
     config(md) {
