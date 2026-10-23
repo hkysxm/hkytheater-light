@@ -7,7 +7,7 @@ import { articlePageData } from './article-page.mts'
 
 export default defineConfig({
   title: 'hkytheater-light',
-  description: '[hky.moe](https://hky.moe) 的轻量版，文章未按时间排序仅归档',
+  description: '[hky.moe](https://hky.moe) 的轻量版，文章按首次 Git 提交时间倒序归档',
   lang: 'zh-CN',
   outDir: fileURLToPath(new URL('../../dist', import.meta.url)),
   themeConfig: {
