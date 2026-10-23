@@ -1,0 +1,28 @@
+/* Keep native selects and other browser controls consistent with manual mode. */
+:root {
+  color-scheme: light;
+}
+
+:root.dark {
+  color-scheme: dark;
+}
+
+/* This site's default extra menus contain only the replaced appearance switch. */
+.VPNavBarAppearance,
+.VPNavBarExtra,
+.VPNavScreenAppearance {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .VPNavBar .container > .title {
+    min-width: 0;
+    flex-shrink: 1;
+  }
+
+  .VPNavBarTitle .title span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

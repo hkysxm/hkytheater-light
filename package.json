@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/hkysxm/hkytheater-light#readme",
   "devDependencies": {
+    "@vueuse/core": "^12.8.2",
     "parse5": "^8.0.1",
     "vitepress": "^1.6.4"
   },
