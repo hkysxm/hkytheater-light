@@ -11,13 +11,17 @@ export default defineConfig({
   lang: 'zh-CN',
   appearance: true,
   head: [
+    ['meta', { name: 'robots', content: 'noindex, nofollow' }],
     ['meta', { name: 'color-scheme', content: 'light dark' }],
     ['meta', { name: 'theme-color', content: '#ffffff', media: '(prefers-color-scheme: light)' }],
     ['meta', { name: 'theme-color', content: '#1b1b1f', media: '(prefers-color-scheme: dark)' }]
   ],
   outDir: fileURLToPath(new URL('../../dist', import.meta.url)),
   themeConfig: {
-    nav: [{ text: '文章', link: '/#文章列表' }]
+    nav: [
+      { text: '文章', link: '/#文章列表' },
+      { text: '主站 hky.moe', link: 'https://hky.moe', target: '_blank', rel: 'noopener noreferrer' }
+    ]
   },
   transformPageData(pageData, { siteConfig }) {
     return articlePageData(pageData, readFileSync(resolve(siteConfig.srcDir, pageData.relativePath), 'utf8'))

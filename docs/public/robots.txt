@@ -1,0 +1,4 @@
+# Crawling is allowed so search engines can read the site's noindex directives.
+# Indexing is disabled by the robots meta tag and X-Robots-Tag response header.
+User-agent: *
+Disallow:
